@@ -1,0 +1,27 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+    body {
+      min-width:150px;
+    }
+    </style>
+    
+    <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+    <div id="tdi-overlay" hidden>
+      <p><label><input type="checkbox" id="tdi-translations" value="1"> Inline Translations</label></p>
+      <p><button id="goto-exam-button">Goto Exam directly</button></p>
+    </div>
+  </body>
+</html>
+

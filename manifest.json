@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+
+  "name": "TDI eLearning Skipper",
+  "description": "This extension automatically switch pages for you during review",
+  "version": "1.0",
+  "icons": { "128": "icon.png" },
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.tdisdi.com/*"
+      ],
+      "js": ["jquery-3.1.0.min.js", "content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage"
+  ]
+}
